@@ -1,0 +1,15 @@
+<h1>IPFS Upload Test</h1>
+<select name="account" (change)="clickAddress($event)">
+  <option *ngFor="let account of accounts" >{{account}}</option>
+</select>
+
+<br>
+<h1>File Upload</h1>
+<br><label for="amount">Value:</label><input type="file" id="fileinput" accept="application/pdf" (change)="setFile($event)"/>
+
+<br><br><button id="send" (click)="saveFile()">Save to IPFS</button>
+<br><br>
+<span id="status">{{status}}</span>
+
+<h3>Current File IPFS hash (click to see file): <a href="{{filePath}}" target="_blank"><span id="storageHash">{{model.storedHash}}</span></a></h3>
+
