@@ -4,8 +4,8 @@ This is an example Angular 4 single page application for storing documents to IP
 
 For simplicity, we will use MetaMask for wallet management and Ganache as a local test blockchain.
 
-##Setup
-###Chrome
+## Setup:
+### Chrome
 MetaMask requires Chrome to work properly and does not handle Ganache restarts smoothly.
 
 It is recommended to create a uniqe test user profile in Chrome for develoment. User profile creation can be found 
@@ -15,24 +15,24 @@ It is recommended to create a uniqe test user profile in Chrome for develoment. 
 This removes all wallet information (including real world wallets if you have any on the current profile). A test profile 
 is highly suggested.*
 
-###Install Metamask
+### Install Metamask
 Visit the MetaMask extension site [here](https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en) 
 and install the MetaMask Chrome extension.
 
-###Install Truffle
+### Install Truffle
 Easiest way to install truffle is to use npm package manager
 
 ```npm install -g truffle```
 
-###Install Ganache
+### Install Ganache
 Ganache build instructions can be found [here](https://github.com/trufflesuite/ganache)
 
-###Install IPFS
+### Install IPFS
 TODO: Dockerize IPFS with open CORS for API endpoints
 
 IPFS build instructions can be found [here](https://github.com/ipfs/go-ipfs#install)
 
-###Configure IPFS CORS for API
+### Configure IPFS CORS for API
 
 Locate your ipfs executable, it should be somewhere in "/usr/local/go/bin/go-ipfs"
 and execute the following commands:
@@ -43,16 +43,16 @@ and execute the following commands:
 
 ```ipfs config --json API.HTTPHeaders.Access-Control-Allow-Methods '["GET", "POST", "PUT", "OPTIONS"]'```
 
-##Deployment
-###Start Ganache
-###Compile and Deploy Contract to Ganache
+## Deployment:
+### Start Ganache
+### Compile and Deploy Contract to Ganache
 If you have used the npm command previously to install truffle, then truffle is global and you can run the following command from any directory in a terminal.
 
 ```truffle compile```
 
 ```truffle --network ganache migrate```
 
-###Configure Metamask
+### Configure Metamask
 
 Import test account using the private key 'c87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3'
 
@@ -60,12 +60,12 @@ Import test account using the private key 'c87509a1c067bbde78beb793e6fa76530b638
 
 Point MetaMask at Ganache under network selection with http://localhost:7545
 
-###Start IPFS
+### Start IPFS
 In a terminal, under the directory of your ipfs executable
 
 ```ipfs daemon```
 
-##Re-Deployment
+## Re-Deployment
 
 Whenever Ganache is re-started the following must be done:
 
